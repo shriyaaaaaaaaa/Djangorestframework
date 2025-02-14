@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+{%load static tailwind_tags %}
+<html>
+
+<head>
+    <title>Hello Page</title>
+    <link rel="stylesheet" href="{% static  'app2/css/style.css' %}">
+    {% tailwind_css%}
+</head>
+<body>
+
+    <img src="{% static 'app2/images/pic.png' %}" alt="hi" width="5 00px">
+  
+    
+    <form action="">
+        <input type="button" value="clickme" onclick="disp()"/>
+    </form>
+    <script src="{% static 'app2/js/scripts.js' %}"></script>
+
+
+
+    <h1>Hello template {{cname}} render</h1>
+    <h2>variable</h2>
+    <h3>name:{{nm}}</h3>
+    <h3>duration:{{du}}</h3>
+    <h3>seats:{{st}}</h3>
+
+    <h4>Filter</h2>
+    <h1>name:{{name | upper}}</h1>
+    <h1>desc:{{desc | upper| truncatewords:2}}</h1>
+    <h2>name:{{name|lower}}</h2>
+    <h2>name:{{name|capfirst}}</h2>
+    <h2>name:{{name|default:'nothing'}}</h2>
+    <h2>name:{{name|slice:"1"}}</h2>
+    <h2>name:{{name|truncatechars:3}}</h2>
+    <h2>name:{{name|length}}</h2>
+
+    <h4>Date</h4>
+    <h1>date:{{dt}}</h1>
+    <h1>date:{{dt | date}}</h1>
+    <h1>date:{{dt | date:'D d M Y'}}
+
+   
+
+
+
+
+
+</body>
+</html>
